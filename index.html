@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Academy | Premium Education with Dual-Tone Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        // Light Palette
+                        'ivory': '#FDFCFA',
+                        'pearl': '#FAF9F6',
+                        'linen': '#F5F3EF',
+                        'stone': '#E8E6E1',
+                        'slate': '#6C7A89',
+                        
+                        // Dark Accents
+                        'midnight': '#0A1929',
+                        'navy': '#1A365D',
+                        'cobalt': '#2D4A8C',
+                        'graphite': '#2C3E50',
+                        'charcoal': '#34495E',
+                        
+                        // Premium Accents
+                        'sapphire': '#2E5AAC',
+                        'sapphire-light': '#4C7BE8',
+                        'amethyst': '#8B5CF6',
+                        'amethyst-light': '#A78BFA',
+                        'emerald': '#10B981',
+                        'emerald-light': '#34D399',
+                        'amber': '#F59E0B',
+                        'amber-light': '#FBBF24',
+                        
+                        // Gradients
+                        'gradient-start': '#2E5AAC',
+                        'gradient-mid': '#7C3AED',
+                        'gradient-end': '#10B981',
+                    },
+                    fontFamily: {
+                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+                        'manrope': ['Manrope', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(46, 90, 172, 0.2)' },
+                            '50%': { boxShadow: '0 0 40px rgba(46, 90, 172, 0.4)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #FDFCFA 0%, #FAF9F6 100%);
+        }
+        .heading-font {
+            font-family: 'Manrope', sans-serif;
+        }
+        .premium-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAF9F6 100%);
+            border: 1px solid rgba(232, 230, 225, 0.8);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(10, 25, 41, 0.15);
+            border-color: rgba(46, 90, 172, 0.2);
+        }
+        .dark-card {
+            background: linear-gradient(135deg, #0A1929 0%, #1A365D 100%);
+            border: 1px solid rgba(46, 90, 172, 0.3);
+            color: white;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #2E5AAC 0%, #8B5CF6 50%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-border {
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(90deg, #2E5AAC 0%, #8B5CF6 100%) border-box;
+        }
+        .dark-gradient-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#0A1929, #0A1929) padding-box,
+                        linear-gradient(90deg, #2E5AAC 0%, #8B5CF6 100%) border-box;
+        }
+        .nav-link {
+            position: relative;
+            color: #2C3E50;
+            font-weight: 500;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #2E5AAC 0%, #8B5CF6 100%);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #2E5AAC 0%, #8B5CF6 100%);
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(46, 90, 172, 0.25);
+        }
+        .btn-secondary {
+            background: white;
+            color: #2E5AAC;
+            border: 2px solid #2E5AAC;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: #2E5AAC;
+            color: white;
+            transform: translateY(-3px);
+        }
+        .btn-dark {
+            background: linear-gradient(90deg, #0A1929 0%, #1A365D 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-dark:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(10, 25, 41, 0.2);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .feature-icon-light {
+            background: linear-gradient(135deg, #E8F0FF 0%, #F0F4FF 100%);
+            color: #2E5AAC;
+        }
+        .feature-icon-dark {
+            background: linear-gradient(135deg, rgba(46, 90, 172, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            color: white;
+        }
+        .stat-card {
+            border-left: 4px solid transparent;
+            border-image: linear-gradient(to bottom, #2E5AAC 0%, #8B5CF6 100%);
+            border-image-slice: 1;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            background: rgba(46, 90, 172, 0.03);
+        }
+        .course-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 10;
+        }
+        .badge-popular {
+            background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 100%);
+            color: #0A1929;
+        }
+        .badge-new {
+            background: linear-gradient(90deg, #10B981 0%, #34D399 100%);
+            color: white;
+        }
+        .badge-premium {
+            background: linear-gradient(90deg, #2E5AAC 0%, #8B5CF6 100%);
+            color: white;
+        }
+        .instructor-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .instructor-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(10, 25, 41, 0.9) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .instructor-card:hover::before {
+            opacity: 1;
+        }
+        .instructor-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .instructor-card:hover .instructor-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0A1929 0%, #1A365D 50%, #2C3E50 100%);
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(10, 25, 41, 0.9) 0%, rgba(26, 54, 93, 0.7) 100%);
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        .pulse-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-ivory text-graphite">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sapphire to-amethyst flex items-center justify-center shadow-lg">
+                        <i class="fas fa-atom text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl heading-font font-bold text-midnight">Nexus Academy</h1>
+                        <p class="text-sm text-slate">Where Knowledge Meets Innovation</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#" class="nav-link font-medium">Home</a>
+                    <a href="#programs" class="nav-link font-medium">Programs</a>
+                    <a href="#why-nexus" class="nav-link font-medium">Why Nexus</a>
+                    <a href="#instructors" class="nav-link font-medium">Instructors</a>
+                    <a href="#success" class="nav-link font-medium">Success</a>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="px-5 py-2.5 btn-secondary rounded-lg font-medium">Login</a>
+                        <a href="#enroll" class="px-5 py-2.5 btn-primary rounded-lg font-medium shadow-md">Enroll Today</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="lg:hidden text-charcoal">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-4">
+                <div class="flex flex-col space-y-5">
+                    <a href="#" class="font-medium text-lg text-charcoal">Home</a>
+                    <a href="#programs" class="font-medium text-lg text-charcoal">Programs</a>
+                    <a href="#why-nexus" class="font-medium text-lg text-charcoal">Why Nexus</a>
+                    <a href="#instructors" class="font-medium text-lg text-charcoal">Instructors</a>
+                    <a href="#success" class="font-medium text-lg text-charcoal">Success</a>
+                    <div class="pt-4 space-y-3">
+                        <a href="#" class="block w-full text-center px-4 py-3 btn-secondary rounded-lg font-medium">Login</a>
+                        <a href="#enroll" class="block w-full text-center px-4 py-3 btn-primary rounded-lg font-medium">Enroll Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden hero-gradient text-white">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-sapphire/20 to-amethyst/20 rounded-full -translate-y-48 translate-x-48 floating-element"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-emerald/20 to-amber/20 rounded-full translate-y-40 -translate-x-40 floating-element" style="animation-delay: 2s;"></div>
+        
+        <div class="container mx-auto px-4 py-20 lg:py-28 relative z-10">
+            <div class="max-w-3xl animate-fade-in">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/20">
+                    <span class="w-2 h-2 rounded-full bg-emerald"></span>
+                    <span class="font-medium">Ranked #1 in Graduate Outcomes 2023</span>
+                </div>
+                
+                <h1 class="text-4xl lg:text-5xl xl:text-6xl heading-font font-bold mb-6 leading-tight">
+                    Transform Your Future with
+                    <span class="gradient-text block">Premium Education</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                    Join 25,000+ professionals who accelerated their careers with our industry-leading programs, 
+                    expert mentorship, and cutting-edge curriculum designed for the modern workplace.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#programs" class="px-8 py-3.5 btn-primary rounded-lg font-bold text-lg shadow-xl">
+                        Explore Programs <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#why-nexus" class="px-8 py-3.5 bg-transparent border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white/10 transition">
+                        <i class="fas fa-play-circle mr-2"></i> Watch Overview
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <div class="text-3xl font-bold text-white mb-2">98.5%</div>
+                        <div class="text-gray-300">Employment Rate</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <div class="text-3xl font-bold text-white mb-2">300+</div>
+                        <div class="text-gray-300">Industry Experts</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <div class="text-3xl font-bold text-white mb-2">150+</div>
+                        <div class="text-gray-300">Programs</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <div class="text-3xl font-bold text-white mb-2">4.9★</div>
+                        <div class="text-gray-300">Student Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 lg:py-24 bg-linen">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-sapphire-light/10 text-sapphire font-medium mb-4">Premium Curriculum</span>
+                <h2 class="text-3xl lg:text-4xl heading-font font-bold text-midnight mb-6">Industry-Leading Programs</h2>
+                <p class="text-lg text-slate">
+                    Choose from our curated selection of programs designed in collaboration with industry leaders.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Program 1 -->
+                <div class="premium-card rounded-2xl overflow-hidden relative">
+                    <span class="course-badge badge-premium">PREMIUM</span>
+                    <div class="p-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-sapphire to-sapphire-light flex items-center justify-center mb-6">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-midnight mb-3">AI & Machine Learning</h3>
+                        <p class="text-slate mb-6">
+                            Master artificial intelligence, deep learning, and data science with hands-on projects.
+                        </p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate">Duration</span>
+                                <span class="font-medium text-charcoal">12 Months</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate">Level</span>
+                                <span class="font-medium text-charcoal">Advanced</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate">Format</span>
+                                <span class="font-medium text-charcoal">Hybrid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="text-2xl font-bold text-midnight">$3,299</div>
+                                <div class="text-sm text-slate">or $275/month</div>
+                            </div>
+                            <a href="#" class="px-5 py-2.5 btn-primary rounded-lg font-medium">
+                                Details <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="premium-card rounded-2xl overflow-hidden relative">
+                    <span class="course-badge badge-popular">MOST POPULAR</span>
+                    <div class="p-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amethyst to-amethyst-light flex items-center justify-center mb-6">
+                            <i class="fas fa-briefcase text-white text-2xl"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-midnight mb-3">Business Leadership</h3>
+                        <p class="text-slate mb-6">
+                            Executive education for senior leaders focusing on strategy, innovation, and management.
+                        </p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate">Duration</span>
+                                <span class="font-medium text-charcoal">8 Months</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate">Level</span>
+                                <span class="font-medium text-charcoal">Executive</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate">Format</span>
+                                <span class="font-medium text-charcoal">Online</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="text-2xl font-bold text-midnight">$4,999</div>
+                                <div class="text-sm text-slate">or $625/month</div>
+                            </div>
+                            <a href="#" class="px-5 py-2.5 btn-primary rounded-lg font-medium">
+                                Details <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="dark-card rounded-2xl overflow-hidden relative pulse-glow">
+                    <span class="course-badge badge-new">NEW</span>
+                    <div class="p-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald to-emerald-light flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-3">Cybersecurity</h3>
+                        <p class="text-gray-300 mb-6">
+                            Advanced security protocols, ethical hacking, and network defense strategies.
+                        </p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Duration</span>
+                                <span class="font-medium text-white">10 Months</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Level</span>
+                                <span class="font-medium text-white">Advanced</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Format</span>
+                                <span class="font-medium text-white">Hybrid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="text-2xl font-bold text-white">$2,899</div>
+                                <div class="text-sm text-gray-300">or $290/month</div>
+                            </div>
+                            <a href="#" class="px-5 py-2.5 btn-primary rounded-lg font-medium">
+                                Details <i class="fas fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 gradient-border text-sapphire font-bold rounded-lg hover:shadow-lg transition">
+                    View All 150+ Programs <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Nexus -->
+    <section id="why-nexus" class="py-16 lg:py-24 bg-midnight text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-sapphire/20 text-sapphire-light font-medium mb-4">Why Choose Nexus</span>
+                    <h2 class="text-3xl lg:text-4xl heading-font font-bold mb-6">The Nexus Advantage</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        We combine academic rigor with practical application, ensuring our graduates are not just educated, but industry-ready.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="feature-icon feature-icon-dark mr-6">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Industry-Connected Faculty</h3>
+                                <p class="text-gray-300">Learn from professionals actively working at Google, Microsoft, McKinsey, and other leading firms.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon feature-icon-dark mr-6">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Project-Based Learning</h3>
+                                <p class="text-gray-300">Build a portfolio of real-world projects that demonstrate your skills to employers.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="feature-icon feature-icon-dark mr-6">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Career Acceleration</h3>
+                                <p class="text-gray-300">Dedicated career coaching, interview prep, and access to our exclusive employer network.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-navy to-cobalt rounded-2xl p-8 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Learning Environment" 
+                             class="rounded-xl mb-6">
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-sapphire to-amethyst flex items-center justify-center">
+                                <i class="fas fa-play text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Virtual Campus Tour</h4>
+                                <p class="text-sm text-gray-300">Explore our state-of-the-art facilities</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Element -->
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-emerald/30 to-amber/30 rounded-full flex items-center justify-center floating-element">
+                        <div class="w-16 h-16 bg-midnight rounded-full flex items-center justify-center shadow-xl dark-gradient-border">
+                            <div class="text-2xl font-bold gradient-text">A+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors -->
+    <section id="instructors" class="py-16 lg:py-24 bg-pearl">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-amethyst-light/10 text-amethyst font-medium mb-4">Meet Our Experts</span>
+                <h2 class="text-3xl lg:text-4xl heading-font font-bold text-midnight mb-6">Learn from Industry Leaders</h2>
+                <p class="text-lg text-slate">
+                    Our faculty includes award-winning professionals, researchers, and industry pioneers.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Instructor 1 -->
+                <div class="instructor-card premium-card rounded-2xl overflow-hidden">
+                    <div class="h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Dr. Sarah Chen" 
+                             class="w-full h-full object-cover">
+                        <div class="instructor-info">
+                            <h3 class="text-xl font-bold text-white mb-1">Dr. Sarah Chen</h3>
+                            <p class="text-sapphire-light mb-2">AI Research Director</p>
+                            <p class="text-gray-300 text-sm">Former Google AI, 15+ years in machine learning</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="w-8 h-8 rounded-full bg-linen flex items-center justify-center text-sapphire hover:bg-sapphire hover:text-white transition">
+                                <i class="fab fa-linkedin-in text-xs"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-linen flex items-center justify-center text-sapphire hover:bg-sapphire hover:text-white transition">
+                                <i class="fab fa-twitter text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 2 -->
+                <div class="instructor-card premium-card rounded-2xl overflow-hidden">
+                    <div class="h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Michael Rodriguez" 
+                             class="w-full h-full object-cover">
+                        <div class="instructor-info">
+                            <h3 class="text-xl font-bold text-white mb-1">Michael Rodriguez</h3>
+                            <p class="text-sapphire-light mb-2">Leadership Expert</p>
+                            <p class="text-gray-300 text-sm">Former McKinsey Partner, 20+ years experience</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="w-8 h-8 rounded-full bg-linen flex items-center justify-center text-sapphire hover:bg-sapphire hover:text-white transition">
+                                <i class="fab fa-linkedin-in text-xs"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-linen flex items-center justify-center text-sapphire hover:bg-sapphire hover:text-white transition">
+                                <i class="fab fa-twitter text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 3 -->
+                <div class="instructor-card dark-card rounded-2xl overflow-hidden">
+                    <div class="h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Priya Patel" 
+                             class="w-full h-full object-cover">
+                        <div class="instructor-info">
+                            <h3 class="text-xl font-bold text-white mb-1">Priya Patel</h3>
+                            <p class="text-emerald-light mb-2">UX Design Director</p>
+                            <p class="text-gray-300 text-sm">Lead designer at Airbnb, 5 design patents</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="w-8 h-8 rounded-full bg-midnight flex items-center justify-center text-white hover:bg-sapphire transition">
+                                <i class="fab fa-linkedin-in text-xs"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-midnight flex items-center justify-center text-white hover:bg-sapphire transition">
+                                <i class="fab fa-dribbble text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 4 -->
+                <div class="instructor-card premium-card rounded-2xl overflow-hidden">
+                    <div class="h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="David Kim" 
+                             class="w-full h-full object-cover">
+                        <div class="instructor-info">
+                            <h3 class="text-xl font-bold text-white mb-1">David Kim</h3>
+                            <p class="text-sapphire-light mb-2">Security Architect</p>
+                            <p class="text-gray-300 text-sm">Head of Security at AWS, author of 3 cybersecurity books</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="w-8 h-8 rounded-full bg-linen flex items-center justify-center text-sapphire hover:bg-sapphire hover:text-white transition">
+                                <i class="fab fa-linkedin-in text-xs"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-linen flex items-center justify-center text-sapphire hover:bg-sapphire hover:text-white transition">
+                                <i class="fab fa-github text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="success" class="py-16 lg:py-24 bg-gradient-to-br from-midnight to-navy text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-sapphire/30 text-sapphire-light font-medium mb-4">Success Stories</span>
+                <h2 class="text-3xl lg:text-4xl heading-font font-bold mb-6">Graduates Making an Impact</h2>
+                <p class="text-lg text-gray-300">
+                    Hear from professionals who transformed their careers with Nexus Academy.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-sapphire">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Alex Morgan" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Alex Morgan</h4>
+                            <p class="text-sapphire-light">Data Scientist at Spotify</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">
+                        "The AI & Machine Learning program was transformative. Within 6 months, I transitioned from 
+                        a marketing role to a data science position with a 60% salary increase. The projects were 
+                        directly relevant to real industry challenges."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="flex text-amber">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-gray-300">Completed: AI & Machine Learning</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-emerald">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                 alt="James Wilson" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">James Wilson</h4>
+                            <p class="text-emerald-light">Product Manager at Microsoft</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">
+                        "Coming from finance, the Business Leadership program gave me the strategic thinking and 
+                        leadership skills to transition into tech. The network I built with instructors and peers 
+                        was invaluable in landing my role at Microsoft."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="flex text-amber">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-gray-300">Completed: Business Leadership</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card bg-white/5 p-6 rounded-xl">
+                    <div class="text-3xl font-bold gradient-text mb-2">$45K</div>
+                    <div class="text-gray-300">Average Salary Increase</div>
+                </div>
+                <div class="stat-card bg-white/5 p-6 rounded-xl">
+                    <div class="text-3xl font-bold gradient-text mb-2">94%</div>
+                    <div class="text-gray-300">Within 6 Months</div>
+                </div>
+                <div class="stat-card bg-white/5 p-6 rounded-xl">
+                    <div class="text-3xl font-bold gradient-text mb-2">500+</div>
+                    <div class="text-gray-300">Partner Companies</div>
+                </div>
+                <div class="stat-card bg-white/5 p-6 rounded-xl">
+                    <div class="text-3xl font-bold gradient-text mb-2">25K+</div>
+                    <div class="text-gray-300">Alumni Network</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment CTA -->
+    <section id="enroll" class="py-16 lg:py-24 bg-gradient-to-br from-linen to-ivory">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl lg:text-4xl heading-font font-bold text-midnight mb-6">
+                    Ready to Accelerate Your Career?
+                </h2>
+                <p class="text-xl text-slate mb-8 max-w-2xl mx-auto">
+                    Join our next cohort and gain access to premium education, expert mentorship, and career support.
+                </p>
+                
+                <div class="premium-card rounded-2xl p-8 lg:p-12 shadow-xl max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-midnight mb-6">Start Your Application</h3>
+                    
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-charcoal font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-stone focus:border-sapphire focus:ring-2 focus:ring-sapphire/20 outline-none transition" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-charcoal font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-stone focus:border-sapphire focus:ring-2 focus:ring-sapphire/20 outline-none transition" placeholder="Smith">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-charcoal font-medium mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-stone focus:border-sapphire focus:ring-2 focus:ring-sapphire/20 outline-none transition" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-charcoal font-medium mb-2">Program Interest</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-stone focus:border-sapphire focus:ring-2 focus:ring-sapphire/20 outline-none transition">
+                                <option>Select a program</option>
+                                <option>AI & Machine Learning</option>
+                                <option>Business Leadership</option>
+                                <option>Cybersecurity</option>
+                                <option>Digital Design</option>
+                                <option>Data Science</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-4 btn-primary rounded-lg font-bold text-lg shadow-lg">
+                            Start Application <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        
+                        <p class="text-sm text-slate text-center">
+                            By submitting, you agree to our <a href="#" class="text-sapphire hover:underline">Terms</a> and <a href="#" class="text-sapphire hover:underline">Privacy Policy</a>.
+                        </p>
+                    </form>
+                </div>
+                
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-slate">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-sapphire mr-2"></i>
+                        <span>Secure Enrollment</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-sapphire mr-2"></i>
+                        <span>Application Review in 48 Hours</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-comments text-sapphire mr-2"></i>
+                        <span>Free Consultation Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-midnight text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sapphire to-amethyst flex items-center justify-center">
+                            <i class="fas fa-atom text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl heading-font font-bold">Nexus Academy</h3>
+                            <p class="text-sm text-gray-400">Where Knowledge Meets Innovation</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Premium education designed for career acceleration and professional growth.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white hover:bg-sapphire transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white hover:bg-sapphire transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white hover:bg-sapphire transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white hover:bg-sapphire transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Programs</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">AI & Machine Learning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Business Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Cybersecurity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Data Science</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Digital Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Career Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Scholarships</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sapphire-light transition">Webinars</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-sapphire mr-3 mt-1"></i>
+                            <span class="text-gray-400">456 Innovation Drive<br>San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-sapphire mr-3"></i>
+                            <span class="text-gray-400">(888) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-sapphire mr-3"></i>
+                            <span class="text-gray-400">admissions@nexus.academy</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-navy text-center text-gray-400">
+                <p>&copy; 2023 Nexus Academy. All rights reserved. | <a href="#" class="hover:text-sapphire-light transition">Privacy Policy</a> | <a href="#" class="hover:text-sapphire-light transition">Terms of Service</a></p>
+                <p class="mt-2 text-sm">Accredited by the International Education Standards Board</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const menuButton = document.getElementById('mobile-menu-button');
+                    const menuIcon = menuButton.querySelector('i');
+                    
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+        
+        // Add animations to elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Observe elements
+        document.querySelectorAll('.premium-card, .dark-card, .stat-card').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add slide-up animation to specific sections
+        const slideObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        document.querySelectorAll('#why-nexus > div').forEach(el => {
+            slideObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
